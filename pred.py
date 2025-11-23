@@ -65,7 +65,7 @@ def predict_all(csv_file):
     scale_num = np.array(config["scalers"]["num_scale"])
     X_num_scaled = (X_raw_num - mean_num) / scale_num
 
-    # 2. Count Features
+    # Count Features
     def get_sum(cols):
         # Calculate row-wise sums for specific task columns
         available = [c for c in cols if c in df.columns]
@@ -110,7 +110,7 @@ def predict_all(csv_file):
     # Combine All Features
     X = np.hstack([X_numeric_all, X_bin, X_bow])
 
-    # 5. Forward Pass
+    # Forward Pass
     # Loops through layers saved in the artifacts JSON
     activation = X
     for i, (w, b) in enumerate(zip(weights, biases)):
