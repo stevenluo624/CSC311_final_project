@@ -14,7 +14,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import MultiLabelBinarizer
 
 
-file_name = "/Users/seanwoo/CSC311_final_project/raw_data/training_data_clean.csv"
+file_name = "raw_data/training_data_clean.csv"
 
 
 def process_multiselect(series, target_tasks):
